@@ -1,0 +1,309 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Titillium Web', sans-serif;
+}
+body{
+	background-color: #00111c;
+}
+
+/*---------------------------------------header--------------------------------------*/
+
+.header{
+	width: 100%;
+	background-color: #00111c;
+	position: relative;
+}
+
+nav{
+	display: flex;
+	padding: 1% 4%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo{
+	width: 150px;
+}
+
+.cartImg{
+	width: 50px;
+	margin-left: 20px;
+}
+
+.nav-links{
+	flex: 1;
+	text-align: right;
+}
+
+.nav-links ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 8px 12px;
+	position: relative;
+	transition: 0.5s;
+}
+
+.nav-links ul li a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.nav-links ul li a::after{
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #f44336;
+	display: block;
+	margin: auto;
+	transition: 0.3s;
+}
+
+.nav-links ul li a:hover::after{
+	width: 100%;
+}
+
+nav .fa{
+	display: none;
+}
+
+.dropDownMenu{
+	display: none;
+	position: absolute;
+	background-color: #00111c;
+	text-align: center;
+	left: 0;
+	transition: 1s;
+	z-index: 3;
+}
+#DDM:hover .dropDownMenu{
+	display: block;
+
+}
+
+/*--------------------------------------CONTACT-------------------------------------*/
+
+.contact-section{
+	width: 100%;
+	margin-bottom: 5%;
+}
+.contact-div{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.contact-section h3{
+	font-size: 40px;
+	color: #fff;
+	text-align: center;
+}
+
+.contact-div input{
+	width: 80%;
+	height: 60px;
+	color: #393838;
+	margin: 2% auto;
+	font-size: 30px;
+	padding-left: 20px;
+	font-weight: bold;
+	border: 2px solid #ff0d0d;
+	border-radius: 15px;
+}
+
+.contact-div input:focus{
+	outline: none;
+}
+
+.contact-div button{
+	width: 200px;
+	height: 50px;
+	background: #ff2929;
+	color: #fff;
+	border: none;
+	border-radius: 10px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.contact{
+	margin: 5%;
+}
+
+.row{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 3%;
+}
+
+.colomn{
+	width: 100%;
+	height: 100px;
+	border: 2px solid #ff2929;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	transition: 0.3s;
+}
+
+.colomn:hover{
+	background: #f96b6b;
+}
+.colomn p{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.row a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+	width: 30%;
+}
+/*---------------------------------------Footer--------------------------------------*/
+
+.footer{
+
+	background: #000;
+	color: #8A8A8A;
+	font-size: 14px;
+	padding: 20px 0 20px;
+}
+
+.footer p{
+	color: #8A8A8A;
+}
+
+.footer h3{
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+.footer-col, .footer-col-1, .footer-col-2{
+	min-width: 250px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.footer-col{
+	margin-left: 80px;
+}
+
+.footer-col-1{
+	flex-basis: 30%;
+	margin-left: 15%;
+	text-align: center;
+}
+
+
+.footer-col-1 h3{
+	font-size: 30px;
+}
+
+.footer-col-1 p{
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+#app-url{
+	margin-top: 20px;
+}
+
+.footer-col-2{
+	flex: 1;
+	text-align: center;
+	margin-left: 30px;
+}
+
+.footer-col-2 h3{
+	font-size: 30px;
+}
+
+.footer-col-2 ul{
+	list-style-type: none;
+
+}
+
+.footer-col-2 ul li a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+}
+.footer-col-1 p a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.row4{
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-col img{
+	width: 300px;
+}
+
+
+
+
+/*--------------------------media-----------------------*/
+
+@media(max-width:  700px){
+
+	html, body {
+		overflow-x: hidden;
+	}
+
+								/*-----header-----*/
+	.text-box h1{
+		font-size: 30px;
+	}
+	.text-box p{
+		font-size: 16px;
+	}
+	.logo{
+		width: 70px;
+	}
+	.nav-links ul li{
+		display: block;
+	}
+	.nav-links{
+		position: absolute;
+		background: #f44336;
+		height: 100vh;
+		width: 200px;
+		top: 0;
+		right: -200px;
+		text-align: left;
+		z-index: 2;
+		transition: 0.5s;
+	}
+	nav .fa{
+		display: block;
+		color: #fff;
+		margin: 10px;
+		font-size: 22px;
+		cursor: pointer;
+	}
+	.nav-links ul{
+		padding: 40px;
+		margin-bottom: 20px;
+	}
+
+										/*-----footer-----*/
+	.row4{
+		flex-direction: column;
+	}
+	.footer-col img{
+		width: 150px;
+		height: 80px;
+		margin-left: 50px;
+	}
+	.footer-col-1{
+		margin-left: 0px;
+	}
+
+}

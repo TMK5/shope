@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta name="viewPort" content="width = device-width, initial-scale = 1.0">
+  <link rel="shortcut icon" type="img/png" href="../favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
+  
+ <script src="https://kit.fontawesome.com/f9dfc91d86.js" crossorigin="anonymous"></script>
+
+  <title>Account - ShopeMe</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/account.css">
+</head>
+
+<body>
+
+  <!-----------------------------------header section------------------------------->
+
+  <section class="header">
+
+    <nav>
+      <a href="../index.html"><img src="../img/index/logo2.png" class="logo"></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-arrow-right" onclick="hideMenue()"></i> <!--------arrow icon to close the menu---------->
+        <ul>
+          <!--------------List of the menu---------------->
+          <li><a href="../index.html">HOME</a></li>
+
+
+          <!------------DropeDownMenu----------->
+          <li id="DDM">
+            <a href="#">SECTIONS   <img src="../img/index/drop-down-arrow.png" width="15" height="8"></a>
+            <div class="dropDownMenu">
+              <ul>
+                <li><a href="product.html">PRODUCT</a></li>
+                <li><a href="feture.html">FETURE</a></li>
+                <li><a href="offers.html">OFFERS</a></li>
+                <li><a href="commingsoon.html">COMMING SOON</a></li>
+              </ul>
+            </div>
+          </li>
+          <!---------------------------------->
+
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="#">ACCOUNT</a></li>
+          <!------------------------------>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenue()"></i> <!-----------bars icon to open the menu-------->
+      <a href="cart.html"><img src="../img/index/whiteCart.png" class="cartImg"></a>
+    </nav>
+
+<!------------------------------------------account page------------------------------>
+
+
+    <div class="form-continer">
+
+      <div>
+        <span id="login-span" onclick="login()">Login</span>
+        <span id="reg-span" onclick="register()">Register</span>
+        <hr id="indicator">
+      </div>
+
+      <div id="div-form">
+      <form id="loginForm">
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="password">
+        <button type="submit" class="btn-1">Login</button>
+        <p><a href="">Forgot password</a><p>
+      </form>
+
+      <form action="../php/signUp.php" method="POST" id="regForm">
+        <input type="text" name="userName" placeholder="Username">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="password">
+        <button type="submit" name="regBtn" class="btn-1">Creat</button>
+      </form>
+      </div>
+
+    </div>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!------------------------------------------JS for toggle menu---------------------------->
+  <script type="text/javascript">
+    var navLinks = document.getElementById("navLinks");
+    function hideMenue() {
+      navLinks.style.right = "-200px";
+    }
+    function showMenue(){
+      navLinks.style.right = "0"
+    }
+  </script>
+
+
+  <!------------------------------------------JS for toggle form---------------------------->
+
+  <script type="text/javascript">
+    
+    var divForm = document.getElementById("div-form");
+    var indicator = document.getElementById("indicator");
+
+    function login(){
+      indicator.style.transform = "translateX(90px)";
+      divForm.style.transform = "translateX(0)";
+
+    }
+
+    function register(){
+      divForm.style.transform = "translateX(-400px)";
+      indicator.style.transform = "translateX(210px)";
+    }
+
+  </script>
+    <!-----------------------------------Footer section------------------------------->
+
+    <div class="footer">
+    <div class="container">
+      <div class="row4">
+        <div class="footer-col">
+          <img src="../img/index/logo2.png">
+        </div>
+        <div class="footer-col-1">
+          <h3>Download our app</h3>
+          <p>Discripe your app</p>
+          <p id="app-url"><a href=""><img src="../img/index/play-store.png" width="150" height="45"></a> <a href=""><img src="../img/index/app-store.png" width="150" height="45"></a></p>
+        </div>
+
+        <div class="footer-col-2">
+          <h3>Follow us</h3>
+          <ul>
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Twitter</a></li>
+            <li><a href="">Instagram</a></li>
+            <li><a href="">Youtube</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
